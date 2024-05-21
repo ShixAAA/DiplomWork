@@ -21,7 +21,7 @@ namespace DiplomWork
 
         private void EventForm_Load(object sender, EventArgs e)
         {
-
+            txtdate.Text = Calendar.static_month + "/" + UserControlDays.static_day + "/" + Calendar.static_year;
         }
 
         private void btnprevious_Click(object sender, EventArgs e)

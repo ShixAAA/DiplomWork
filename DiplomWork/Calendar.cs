@@ -15,6 +15,7 @@ namespace DiplomWork
     public partial class Calendar : Form
     {
         int month, year;
+        public static int static_month, static_year;
 
         public Calendar()
         {
@@ -40,6 +41,11 @@ namespace DiplomWork
             DateTime now = DateTime.Now;
             month = now.Month;
             year = now.Year;
+
+
+            static_month = month;
+            static_year = year;
+
 
             String monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             LBDATE.Text = monthname + " " + year;
@@ -67,6 +73,9 @@ namespace DiplomWork
 
             month--;
 
+            static_month = month;
+            static_year = year;
+
             String monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             LBDATE.Text = monthname + " " + year;
 
@@ -87,11 +96,6 @@ namespace DiplomWork
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            EventForm evt = new EventForm();
-            evt.ShowDialog();
-        }
 
         private void btnnext_Click(object sender, EventArgs e)
         {
@@ -99,6 +103,9 @@ namespace DiplomWork
             daycontainer.Controls.Clear();
 
             month++;
+
+            static_month = month;
+            static_year = year;
 
             String monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             LBDATE.Text = monthname + " " + year;

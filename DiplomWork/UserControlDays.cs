@@ -12,6 +12,9 @@ namespace DiplomWork
 {
     public partial class UserControlDays : UserControl
     {
+        public static string static_day;
+
+
         public UserControlDays()
         {
             InitializeComponent();
@@ -25,6 +28,13 @@ namespace DiplomWork
         public void Days(int numbay) 
         {
             lbdays.Text = numbay + "";
+        }
+
+        private void UserControlDays_Click(object sender, EventArgs e)
+        {
+            static_day = lbdays.Text;
+            EventForm evt = new EventForm();
+            evt.Show();
         }
     }
 }

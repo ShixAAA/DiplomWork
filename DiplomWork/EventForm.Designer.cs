@@ -38,7 +38,7 @@
             this.btnsave = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtdate = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.trainerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,7 +85,7 @@
             // comboBox2
             // 
             this.comboBox2.DataSource = this.trainerBindingSource;
-            this.comboBox2.DisplayMember = "LastName";
+            this.comboBox2.DisplayMember = "FirstName";
             this.comboBox2.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F);
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(54, 99);
@@ -136,20 +136,21 @@
             this.textBox2.Size = new System.Drawing.Size(213, 26);
             this.textBox2.TabIndex = 10;
             // 
-            // dateTimePicker1
+            // txtdate
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(54, 44);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(213, 20);
-            this.dateTimePicker1.TabIndex = 11;
+            this.txtdate.Enabled = false;
+            this.txtdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtdate.Location = new System.Drawing.Point(54, 38);
+            this.txtdate.Name = "txtdate";
+            this.txtdate.Size = new System.Drawing.Size(213, 26);
+            this.txtdate.TabIndex = 11;
             // 
             // EventForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(662, 185);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.txtdate);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnsave);
@@ -177,6 +178,6 @@
         private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox txtdate;
     }
 }
